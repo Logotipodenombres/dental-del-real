@@ -1,0 +1,16 @@
+/* Local review: monochrome, subtle motion, and an explicit booking destination. */
+.card{position:relative;isolation:isolate;box-shadow:0 25px 80px #0006;transition:box-shadow .4s,border-color .4s}
+.card:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;background:radial-gradient(450px circle at var(--light-x,50%) var(--light-y,15%),#ffffff10,transparent 75%)}
+.card:hover{border-color:#777;box-shadow:0 30px 90px #0009}
+.socials{flex-wrap:wrap;align-items:center}
+.socials a{transition:transform .25s,background .25s,border-color .25s,box-shadow .25s}
+.socials a:hover,.socials a:focus-visible{transform:translateY(-5px);background:#292929;box-shadow:0 9px 25px #0006}
+.socials a.doctoralia{width:auto;min-width:140px;gap:9px;padding:0 16px;border-color:#bfbfbf;color:#fff;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+.doctoralia span{font:500 13px/1.2 Arial,sans-serif;letter-spacing:.02em}.doctoralia svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.button,.quick-links a{transition:transform .25s,box-shadow .25s,background .25s}.button:hover,.quick-links a:hover{transform:translateY(-3px);box-shadow:0 12px 25px #0005}
+.brand-rule{transform-origin:center;animation:rule-enter 1s ease-out both}.motto{animation:copy-enter .8s ease-out both}
+.entrance{transition:opacity .65s,transform .65s}.entrance:not(.entered){opacity:.3;transform:translateY(20px)}
+.service-list details{transition:border-color .25s,background .25s}.service-list details[open]{border-color:#777;background:#191919}
+@keyframes rule-enter{from{transform:scaleX(.15);opacity:0}to{transform:scaleX(1);opacity:1}}
+@keyframes copy-enter{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.card,.socials a,.button,.quick-links a,.entrance,.service-list details{transition:none!important;transform:none!important}.motto,.brand-rule{animation:none}.entrance:not(.entered){opacity:1}.card:before{background:none}}
